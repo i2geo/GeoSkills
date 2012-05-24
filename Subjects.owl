@@ -1,0 +1,1121 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:gs="http://www.inter2geo.eu/2008/ontology/GeoSkills#"
+    xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+    xmlns="http://inter2geo.eu/2008/ontologies/Subjects#"
+  xml:base="http://inter2geo.eu/2008/ontologies/Subjects">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Combinatorics">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Discrete_Mathematics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#EducationalPathway"/>
+  <owl:Class rdf:ID="Patterns_and_Sequences">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Numbers_and_Computation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Several_Variables">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#FunctionTopic"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#FunctionTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Calculus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Logic_and_Foundations">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CurrikiSubjects"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Number_Concepts">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Numbers_and_Computation"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Number"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Number"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Discrete_Mathematics">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Recursion">
+    <rdfs:subClassOf rdf:resource="#Discrete_Mathematics"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematical_Physics">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Frequency"/>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#gears_r"/>
+            </owl:oneOf>
+          </owl:Class>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_representation"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_representation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Frequency"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Applied_Mathematics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#ThreeDObject"/>
+  <owl:Class rdf:ID="Geometry">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Real_Analysis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Gradient"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Continuity_and_discontinuity"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Gradient"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Continuity_and_discontinuity"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Analysis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Graph_Theory">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_problems">
+            <rdfs:subClassOf rdf:resource="#Discrete_Mathematics"/>
+          </rdf:Description>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_problems"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Discrete_Mathematics"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Topic"/>
+  <owl:Class rdf:ID="Mathematical_Economics">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Applied_Mathematics"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Percentage"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Percentage"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Elementary_plane_geometry">
+    <rdfs:subClassOf rdf:resource="#Geometry"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#GeometricObject"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#TriangleInterceptTheoremConverse"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#TriangleInterceptTheorem"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Thales_Circle_Theorem_Converse"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Thales-Circle-Theorem"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#sum-of_polygon-angles-is-nminus2-180"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#PythagorasTheoremConverse"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#sum-of-triangles-angles-is-180"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#PythagorasTheorem"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Midpoint_segment_in_triangle"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Midpoint_line_in_triangle_ConverseTheorem"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Midpoint_line_in_triangle"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#InterceptTheoremConverse"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#InterceptTheorem"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#ConstructionRecipe"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Basic_geometric_topic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Relationship"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#If_two_lines_are_parallel_a_perpendicular_line_to_one_of_them_is_also_perpendicular_to_the_other_one"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#If_a_line_is_perpendicular_to_two_lines_the_two_lines_are_parallel">
+                <gs:modificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+                >2009-10-02T00:00:00</gs:modificationDate>
+                <gs:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+                >2009-10-02T00:00:00</gs:creationDate>
+              </rdf:Description>
+            </owl:oneOf>
+          </owl:Class>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#ConstructionRecipe"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Basic_geometric_topic"/>
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#GeometricObject"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Relationship"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Simplecalculationofarea"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Simplecalculationofarea"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Simplecalculationoflength"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Simplecalculationoflength"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Transformation"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Transformation"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Trigonometric_ratio"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Trigonometric_ratio"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Process"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Process"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Harmonic_Analysis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Analysis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Logic">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Proof"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Proof"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Logic_and_Foundations"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Differential_and_Difference_Equation">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Statistics_and_Probability">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Data_analysis"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Randomness"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Randomness"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Data_analysis"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Engineering_Mathematics">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Applied_Mathematics"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_r"/>
+            </owl:oneOf>
+          </owl:Class>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematics_for_Computer_Science">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Applied_Mathematics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Set_Theory">
+    <rdfs:subClassOf rdf:resource="#Logic_and_Foundations"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Arithmetic">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Decimal_number"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Decimal_number"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Square_root"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Square_Number"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Scale_factor"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Remainder"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Quotient"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Ratio_of_numbers"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Power"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Numerical_operation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Fraction"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Division"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Divisor"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Dividend"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Dividend"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Divisor"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Division"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Fraction"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Numerical_operation"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Power"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Quotient"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Ratio_of_numbers"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Remainder"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Scale_factor"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Square_Number"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Square_root"/>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Operation_r"/>
+            </owl:oneOf>
+          </owl:Class>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Numbers_and_Computation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Game_Theory">
+    <rdfs:subClassOf rdf:resource="#Discrete_Mathematics"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Global_Analysis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Analysis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Applied_Mathematics">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Calculus_of_Variations">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Variation"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Variation"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Calculation_r"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Simplecalculation_r"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <Domain rdf:ID="calculus">
+                <gs:commonName xml:lang="en">calculus</gs:commonName>
+                <gs:commonName xml:lang="fr">analyse</gs:commonName>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+              </Domain>
+            </owl:oneOf>
+          </owl:Class>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Calculus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Orthogonal_projection_of_solid"/>
+  <owl:Class rdf:ID="Integral_Transforms">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Analysis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Measurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Numbers_and_Computation"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Coordinates"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Coordinates"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Magnitude"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Magnitude"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Percentage"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Percentage"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Area_unit_r"/>
+            </owl:oneOf>
+          </owl:Class>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Numbers_and_Computation">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Algorithms">
+    <rdfs:subClassOf rdf:resource="#Discrete_Mathematics"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_problems"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_problems"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Domain">
+    <rdfs:subClassOf rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Topic"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematical_Biology">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Applied_Mathematics"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#EducationalLevel"/>
+  <owl:Class rdf:ID="Tensor_Calculus">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Calculus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Advanced_Calculus">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <Domain rdf:about="#calculus"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Calculus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Operational_Calculus">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Calculus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Software">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Tool"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Tool"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Applied_Mathematics"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Number_Theory">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Rational_Number"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Natural_number"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Natural_number"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Irrational_Number"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Integer"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Integer"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Rational_Number"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Irrational_Number"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Algebra_and_Number_Theory"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Algebra_and_Number_Theory">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Analysis">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TracesSubject"/>
+  <owl:Class rdf:about="#Calculus">
+    <rdfs:subClassOf rdf:resource="#CurrikiSubjects"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Competency"/>
+  <owl:Class rdf:ID="Topic_from_Subjects">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CurrikiSubjects"/>
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Topic"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematics_for_Humanities">
+    <rdfs:subClassOf rdf:resource="#Applied_Mathematics"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_from_other_subjects"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_problem"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Complex_Analysis">
+    <rdfs:subClassOf rdf:resource="#Analysis"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_of_Function"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_of_Function"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Single_Variable">
+    <rdfs:subClassOf rdf:resource="#Calculus"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#FunctionTopic"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Variable"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#FunctionTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Variable"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Functional_Analyis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_of_Function"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_of_Function"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Analysis"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Solid_Geometry">
+    <rdfs:subClassOf rdf:resource="#Geometry"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Orthogonal_projection_of_solid"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Orthogonal_projection_of_solid"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#ThreeDObject"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Transformation"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Volume"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Movement"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Simplecalculationofvolume"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Simplecalculationofvolume"/>
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#ThreeDObject"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Transformation"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Volume"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Movement"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Numerical_Analysis">
+    <rdfs:subClassOf rdf:resource="#Analysis"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Algebra">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Algebraic_calculation"/>
+          <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#SymbolicExpression"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Calculation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Algebraic_calculation"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#SymbolicExpression"/>
+            <owl:onProperty rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+          </owl:Restriction>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Algebra_and_Number_Theory"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Length_unit"/>
+  <owl:Class rdf:ID="Signal_Analysis">
+    <rdfs:subClassOf rdf:resource="#Analysis"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="subjectHasTopic">
+    <rdfs:subPropertyOf rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#hasTopic"/>
+    <rdfs:domain rdf:resource="#TracesSubject"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="subjectHasName">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#commonName"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#TracesSubject"/>
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Competency"/>
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#EducationalLevel"/>
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#EducationalPathway"/>
+          <owl:Class rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Topic"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:Thing rdf:ID="threeD-coords-topic">
+    <rdf:type rdf:resource="#TracesSubject"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#ThreeD_coordinates_r"/>
+    </subjectHasTopic>
+  </owl:Thing>
+  <owl:Thing rdf:ID="probability-topic">
+    <rdf:type rdf:resource="#TracesSubject"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Probability_r"/>
+    </subjectHasTopic>
+  </owl:Thing>
+  <owl:Thing rdf:ID="twoD-coords-topic">
+    <rdf:type rdf:resource="#TracesSubject"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Cartesian_coordinates_r"/>
+    </subjectHasTopic>
+  </owl:Thing>
+  <owl:Thing rdf:ID="lines-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Straight_Line_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <owl:Thing rdf:ID="twoD-plots-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_of_Function_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Variation_r">
+    <gs:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2009-10-02T00:00:00</gs:creationDate>
+  </rdf:Description>
+  <owl:Thing rdf:ID="arts-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Unknown_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <owl:Thing rdf:ID="proportions-topic">
+    <rdf:type rdf:resource="#TracesSubject"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Proportional_r"/>
+    </subjectHasTopic>
+  </owl:Thing>
+  <TracesSubject rdf:ID="algebra-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Algebraic_calculation_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Number_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#SymbolicExpression_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </TracesSubject>
+  <owl:Thing rdf:ID="barycenter-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Barycenter_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <TracesSubject rdf:ID="threeD-plots-topic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <subjectHasTopic rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_of_Function_r"/>
+    <subjectHasTopic rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_display_of_data_r"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#ThreeDObject_r"/>
+    </subjectHasTopic>
+  </TracesSubject>
+  <TracesSubject rdf:ID="arcs-and-circles-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Arc_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Circle_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </TracesSubject>
+  <TracesSubject rdf:ID="calculus-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Function_attributes_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Function_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Number_r"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </TracesSubject>
+  <TracesSubject rdf:ID="trigonometry-topic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Trigonometric_function_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Trigonometric_ratio_r"/>
+    </subjectHasTopic>
+  </TracesSubject>
+  <owl:Thing rdf:ID="stats-topics">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Data_analysis_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <TracesSubject rdf:ID="missing-topic">
+    <subjectHasTopic rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Unknown_r"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </TracesSubject>
+  <TracesSubject rdf:ID="quadrilateral-topic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Quadrilateral_r"/>
+    </subjectHasTopic>
+  </TracesSubject>
+  <TracesSubject rdf:ID="triangles-equality-topic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Reflection_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Rotation_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Translation_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Triangle_r"/>
+    </subjectHasTopic>
+  </TracesSubject>
+  <TracesSubject rdf:ID="points-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Point_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </TracesSubject>
+  <TracesSubject rdf:ID="sections-topic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Section_r"/>
+    </subjectHasTopic>
+  </TracesSubject>
+  <owl:Thing rdf:ID="area-topic">
+    <rdf:type rdf:resource="#TracesSubject"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Area_r"/>
+    </subjectHasTopic>
+  </owl:Thing>
+  <owl:Thing rdf:ID="transformations-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Transformation_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Polygon">
+    <rdfs:subClassOf rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#GeometricObject"/>
+  </rdf:Description>
+  <owl:Thing rdf:ID="solids-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Solidobjects_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <owl:Thing rdf:ID="Length_unit_16">
+    <rdf:type rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Length_unit"/>
+  </owl:Thing>
+  <owl:Thing rdf:ID="angles-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Angle_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <owl:Thing rdf:ID="locus-topic">
+    <rdf:type rdf:resource="#TracesSubject"/>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Locus_r"/>
+    </subjectHasTopic>
+  </owl:Thing>
+  <owl:Thing rdf:ID="polygons-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Polygon_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <TracesSubject rdf:ID="other-topics-of-geometry">
+    <subjectHasTopic rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Unknown_r"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </TracesSubject>
+  <owl:Thing rdf:ID="lengths-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Length_r"/>
+    </subjectHasTopic>
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Length_unit_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="#TracesSubject"/>
+  </owl:Thing>
+  <TracesSubject rdf:ID="vector-topic">
+    <subjectHasTopic>
+      <owl:Thing rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Vector_r"/>
+    </subjectHasTopic>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <subjectHasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Vectors</subjectHasName>
+  </TracesSubject>
+  <TracesSubject rdf:ID="triangles-topic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <subjectHasTopic rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills#Triangle_r"/>
+  </TracesSubject>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.1, Build 536)  http://protege.stanford.edu -->
