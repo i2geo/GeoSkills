@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY GeoSkills "http://www.inter2geo.eu/2008/ontology/GeoSkills#" >
+    <!ENTITY GeoSkillsRelatives "http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#"
+     xml:base="http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:GeoSkills="http://www.inter2geo.eu/2008/ontology/GeoSkills#"
+     xmlns:GeoSkillsRelatives="http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#">
+    <owl:Ontology rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives">
+        <owl:imports rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#definitionURL -->
+
+    <owl:DatatypeProperty rdf:about="&GeoSkillsRelatives;definitionURL">
+        <rdfs:domain rdf:resource="&GeoSkills;Topic"/>
+        <rdfs:subPropertyOf rdf:resource="&GeoSkillsRelatives;referenceURL"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#referenceURL -->
+
+    <owl:DatatypeProperty rdf:about="&GeoSkillsRelatives;referenceURL"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Aperiodic_plane_tesselation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Aperiodic_plane_tesselation_r">
+        <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Aperiodic_tiling</definitionURL>
+    </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Periodic_3D_tesselation_r">
+    <definitionURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Parkettierung#Arten_der_3D-Parkettierung</definitionURL>
+  </rdf:Description>
+
+
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Periodic_3D_tesselation_r">
+    <definitionURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Parkettierung#Arten_der_3D-Parkettierung</definitionURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Plane_Configuration_properties_r">
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Parkettierung</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Tessellation</definitionURL>
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Pavage</definitionURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Periodic_plane_tesselation_r">
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Pavage</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Parkettierung</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Tessellation</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Incircle_r">
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Incircle</definitionURL>
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Kreise_am_Dreieck</definitionURL>
+   </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Circle_r">
+        <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Cercle</definitionURL>
+        <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Circle</definitionURL>
+        <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Kreis</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Perspective_r">
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Perspective_(représentation)</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Perspective_(visual)</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Perspektive</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Parabola_r">
+    <definitionURL xml:lang="en">http://de.wikipedia.org/wiki/Parabel_(Mathematik)</definitionURL>
+    <definitionURL xml:lang="en">http://fr.wikipedia.org/wiki/Parabole</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Parabola</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Ellipse_r">
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Ellipse</definitionURL>
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Ellipse_(mathématiques)</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Ellipse</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Circle_of_latitude_r">
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Breitenkreis</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Parallel_(latitude)</definitionURL>
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Parallèle_(géographie)</definitionURL>
+  </rdf:Description>
+
+
+
+
+
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Meridian_r">
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Méridien</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Meridian_(Geographie)</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Meridian_(geography)</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Cone_r">
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Kegel_(Geometrie)</definitionURL>
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Cône_(géométrie)</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Cone</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Conic_r">
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Conique</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Conic_section</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Kegelschnitt</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Circumcircle_r">
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Umkreis</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Circumcircle</definitionURL>
+    <definitionURL xml:lang="de">http://fr.wikipedia.org/wiki/Cercle_circonscrit</definitionURL>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#ExCircle_r">
+    <definitionURL xml:lang="de">http://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Kreise_am_Dreieck</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Incircle_and_excircles_of_a_triangle</definitionURL>
+  </rdf:Description>
+
+
+
+
+ <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#FeuerbachCircle_r">
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Feuerbachkreis</definitionURL>
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Cercle_d%27Euler</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Nine-point_circle</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Hyperbola_r">
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Hyperbole_(mathématiques)</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Hyperbola</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Hyperbel_(Mathematik)</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Circumference_r">
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Circonférence</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Umfang</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Circumference</definitionURL>
+  </rdf:Description>
+
+
+
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Incircle_r">
+    <definitionURL xml:lang="de">http://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle</definitionURL>
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Kreise_am_Dreieck</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Incircle_and_excircles_of_a_triangle</definitionURL>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.inter2geo.eu/2008/ontology/GeoSkills#Disc_r">
+    <definitionURL xml:lang="de">http://de.wikipedia.org/wiki/Scheibe</definitionURL>
+    <definitionURL xml:lang="fr">http://fr.wikipedia.org/wiki/Disque_(géométrie)</definitionURL>
+    <definitionURL xml:lang="en">http://en.wikipedia.org/wiki/Disk_(mathematics)</definitionURL>
+  </rdf:Description>
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
