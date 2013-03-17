@@ -1,0 +1,4196 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY GeoSkills "http://www.inter2geo.eu/2008/ontology/GeoSkills#" >
+    <!ENTITY GeoSkillsRelatives "http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#"
+     xml:base="http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:GeoSkills="http://www.inter2geo.eu/2008/ontology/GeoSkills#"
+     xmlns:GeoSkillsRelatives="http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.inter2geo.eu/2008/ontology/GeoSkills"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#defining -->
+
+    <owl:ObjectProperty rdf:about="#defining">
+        <rdfs:range rdf:resource="&GeoSkills;NamableBit"/>
+        <rdfs:domain rdf:resource="#DefinitionText"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#definitionTextsForThis -->
+
+    <owl:ObjectProperty rdf:about="#definitionTextsForThis">
+        <owl:equivalentProperty>
+            <owl:ObjectProperty>
+                <owl:inverseOf rdf:resource="#defining"/>
+            </owl:ObjectProperty>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#rel_from -->
+
+    <owl:ObjectProperty rdf:about="#rel_from">
+        <rdfs:range rdf:resource="&GeoSkills;NamableBit"/>
+        <rdfs:domain rdf:resource="#relativeRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#rel_to -->
+
+    <owl:ObjectProperty rdf:about="#rel_to">
+        <rdfs:range rdf:resource="&GeoSkills;NamableBit"/>
+        <rdfs:domain rdf:resource="#relativeRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#relationsFromThere -->
+
+    <owl:ObjectProperty rdf:about="#relationsFromThere">
+        <owl:equivalentProperty>
+            <owl:ObjectProperty>
+                <owl:inverseOf rdf:resource="#rel_from"/>
+            </owl:ObjectProperty>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#relationsToThere -->
+
+    <owl:ObjectProperty rdf:about="#relationsToThere">
+        <owl:equivalentProperty>
+            <owl:ObjectProperty>
+                <owl:inverseOf rdf:resource="#rel_to"/>
+            </owl:ObjectProperty>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#text -->
+
+    <owl:DatatypeProperty rdf:about="&GeoSkills;text">
+        <rdfs:domain rdf:resource="#DefinitionText"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#definitionURL -->
+
+    <owl:DatatypeProperty rdf:about="#definitionURL">
+        <rdfs:domain rdf:resource="&GeoSkills;Topic"/>
+        <rdfs:subPropertyOf rdf:resource="#referenceURL"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#language -->
+
+    <owl:DatatypeProperty rdf:about="#language">
+        <rdfs:domain rdf:resource="#DefinitionText"/>
+        <rdfs:range rdf:resource="&xsd;language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#locationURL -->
+
+    <owl:DatatypeProperty rdf:about="#locationURL">
+        <rdfs:comment
+            >The URL where the resource with this property can be (re-)fetched from.</rdfs:comment>
+        <rdfs:domain rdf:resource="&GeoSkills;Resource"/>
+        <rdfs:subPropertyOf rdf:resource="#referenceURL"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#referenceURL -->
+
+    <owl:DatatypeProperty rdf:about="#referenceURL"/>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#rel_weight -->
+
+    <owl:DatatypeProperty rdf:about="#rel_weight">
+        <rdfs:domain rdf:resource="#relativeRelation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#NamableBit -->
+
+    <owl:Class rdf:about="&GeoSkills;NamableBit"/>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Resource -->
+
+    <owl:Class rdf:about="&GeoSkills;Resource"/>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Topic -->
+
+    <owl:Class rdf:about="&GeoSkills;Topic"/>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#DefinitionText -->
+
+    <owl:Class rdf:about="#DefinitionText">
+        <rdfs:subClassOf rdf:resource="&GeoSkills;Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#FetchedDefinitionText -->
+
+    <owl:Class rdf:about="#FetchedDefinitionText">
+        <rdfs:subClassOf rdf:resource="#DefinitionText"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#ManualDefinitionText -->
+
+    <owl:Class rdf:about="#ManualDefinitionText">
+        <rdfs:subClassOf rdf:resource="#DefinitionText"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#computedRelativeRelations -->
+
+    <owl:Class rdf:about="#computedRelativeRelations">
+        <rdfs:subClassOf rdf:resource="#relativeRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#relativeRelation -->
+
+    <owl:Class rdf:about="#relativeRelation"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#NamedIndividual -->
+
+    <owl:Class rdf:about="&owl;NamedIndividual"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Absolute_frequency_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Absolute_frequency_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Absolute_H%C3%A4ufigkeit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#AcuteAngle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;AcuteAngle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Spitzer_Winkel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Acute_angle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angle_aigu</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Addition_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Addition_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Addition</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Addition</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Addition</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Affine_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Affine_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Affine_function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction_affine</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Algebraic_Curve_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Algebraic_Curve_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Algebraische_Kurve</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Algebraic_curve</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Algebraic_expression_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Algebraic_expression_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Algebraic_expression</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Expression_alg%C3%A9brique</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Ampliation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Ampliation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Streckung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Enlargement</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Homoth%C3%A9tie</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Angle_Bisector_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Angle_Bisector_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Winkelhalbierende</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Angle_bisector</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Angle_fig_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Angle_fig_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Winkel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Angle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Angle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Angle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Winkel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Angle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Secteur_angulaire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Aperiodic_plane_tesselation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Aperiodic_plane_tesselation_r">
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Aperiodic_tiling</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Apex_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Apex_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Scheitel</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Approximate_value_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Approximate_value_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Valeur_approch%C3%A9e</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#ApproximationProcess_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;ApproximationProcess_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/N%C3%A4herungsverfahren</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Arc_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Arc_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kreisbogen</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Arch</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Arc</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Archimedean_solid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Archimedean_solid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Archimedischer_K%C3%B6rper</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Archimedean_solid</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Area_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Area_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Fl%C3%A4che</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Aire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Area_unit_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Area_unit_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Fl%C3%A4cheneinheit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Axis_of_coordinates_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Axis_of_coordinates_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Coordinate_axis</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Bar_chart_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Bar_chart_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Balkendiagramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Bar_diagram</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Diagramme_en_barres</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Barycenter_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Barycenter_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Schwerpunkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Barycenter</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Barycentre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Base_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Base_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Grundfl%C3%A4che</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Bias_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Bias_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Bias</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Biais</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Bisection_Method_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Bisection_Method_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Bisektionsverfahren</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Bisection_method</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Bisector-Plane_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Bisector-Plane_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Plan_m%C3%A9diateur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Bound_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Bound_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Grenzwert</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Bound</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Borne</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Box_plot_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Box_plot_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kastengrafik</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Box_plot</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#CAS_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;CAS_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/CAS</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/CAS</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Syst%C3%A8me_de_calcul_formel</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Calculation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Calculation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Calculation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Calculator_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Calculator_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Taschenrechner</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Calculator</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Calculatrice</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Capacity_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Capacity_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Rauminhalt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Capacity</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Capacit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cartesian_coordinates_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cartesian_coordinates_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kartesische_Koordinaten</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cartesian_coordinates</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Case_count_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Case_count_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Fallstudie</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Central_angle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Central_angle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angle_au_centre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Central_tendency_measure_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Central_tendency_measure_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lageparameter</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Centre_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Centre_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Mittelpunkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Centre</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Centre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Circle_of_latitude_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Circle_of_latitude_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Breitenkreis</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Parallel_(latitude)</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Parall&#232;le_(g&#233;ographie)</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Circle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Circle_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Kreis</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Circle</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Cercle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Circular_chart_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Circular_chart_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kreisdiagramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Diagramme_circulaire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Circular_sector_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Circular_sector_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kreissektor</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Circle_sector</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Secteur_circulaire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Circumcenter -->
+
+    <rdf:Description rdf:about="&GeoSkills;Circumcenter">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Circumcenter</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Circumcircle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Circumcircle_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Umkreis</definitionURL>
+        <definitionURL xml:lang="de"
+            >http://fr.wikipedia.org/wiki/Cercle_circonscrit</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Circumcircle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Circumference_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Circumference_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Umfang</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Circumference</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Circonf&#233;rence</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Collinearity_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Collinearity_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kollinearit%C3%A4t</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Compass_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Compass_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zirkel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Compass</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Compas</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Complex_event_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Complex_event_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Combined_event</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89v%C3%A9nement</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Conditional_probability_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Conditional_probability_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Bedingte_Wahrscheinlichkeit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Conditional_probability</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Probabilit%C3%A9_conditionnelle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cone_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cone_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Kegel_(Geometrie)</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Cone</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/C&#244;ne_(g&#233;om&#233;trie)</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Configuration_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Configuration_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Konfiguration</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Configuration</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Configuration</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Congruent_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Congruent_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Deckungsgleich</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Congruent</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Isom%C3%A9trique</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Congruent_triangles_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Congruent_triangles_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Triangles_isom%C3%A9triques</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Conic_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Conic_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Kegelschnitt</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Conic_section</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Conique</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Constant_of_proportionality_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Constant_of_proportionality_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Proportionalit%C3%A4tsfaktor</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Contingency_table_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Contingency_table_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kontingenztabelle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Contingency_table</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Continuous_random_variable_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Continuous_random_variable_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Continuous_random_variable</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Coordinates_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Coordinates_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Koordinaten</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Coordinates</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Coordonn%C3%A9es</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#CorrespondingAngle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;CorrespondingAngle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Stufenwinkel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Corresponding_angles</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angles_correspondants</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cosine_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cosine_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Cosinus</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Counterexample_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Counterexample_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gegenbeispiel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Counter_example</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#CrossRatio_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;CrossRatio_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Doppelverh%C3%A4ltnis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cross_ratio</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cube_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cube_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/W%C3%BCrfel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cube</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Cube</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cuboid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cuboid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quader</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Pav%C3%A9_droit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cumulative_frequency_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cumulative_frequency_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Summenh%C3%A4ufigkeit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cumulative_frequency</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Curve_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Curve_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kurve</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Curve</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Courbe</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cycloid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cycloid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Radkurve</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cycloid</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Cycloide</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Cylinder_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Cylinder_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zylinder</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cylinder</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Cylindre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Data_analysis_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Data_analysis_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Data_analysis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Traitement_de_donn%C3%A9es</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Data_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Data_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Daten</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Data</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Donn%C3%A9es</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Decimal_number_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Decimal_number_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Dezimalzahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Decimal_number</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Nombre_d%C3%A9cimal</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Deductive_method_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Deductive_method_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Deduktive_Methode</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Dependency_relation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Dependency_relation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Dependency_relation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Diagonal_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Diagonal_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Diagonale</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Diagonal</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Diagonale</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Diagram_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Diagram_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Diagramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Diagram</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Diagramme</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Diameter_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Diameter_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Durchmesser</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Diameter</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Diam%C3%A8tre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Direct_Proof_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Direct_Proof_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Direkter_Beweis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Direct_proof</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Disc_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Disc_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Scheibe</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Disk_(mathematics)</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Disque_(g&#233;om&#233;trie)</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Discrete_random_variable_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Discrete_random_variable_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Diskrete_Zufallsvariable</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Discrete_random_variable</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Distance_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Distance_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Abstand</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Distance</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Distance</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Divide_in_triangles_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Divide_in_triangles_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Triangulate</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Dividend_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Dividend_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Dividend</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Dividend</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Dividende</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Division_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Division_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Division</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Division</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Division</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Divisor_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Divisor_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Divisor</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Divisor</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Diviseur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Dodecahedron_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Dodecahedron_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Dodekaeder</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Dodecahedron</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Dod%C3%A9ca%C3%A8dre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Domain_and_range_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Domain_and_range_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Domain_and_range</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Dynamic_interactive_geometry_environments_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Dynamic_interactive_geometry_environments_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Dynamic_geometry_software</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Edge_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Edge_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kante</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Edge</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Ar%C3%AAte</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Ellipse_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Ellipse_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Ellipse</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Ellipse</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Ellipse_(math&#233;matiques)</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Enlargement_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Enlargement_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Streckung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Enlargement</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Homoth%C3%A9tie</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Epicycloid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Epicycloid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Epicycloid</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Equality_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Equality_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gleichheit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Equality</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89galit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Equation_of_a_straight_line_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Equation_of_a_straight_line_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89quation_d%27une_droite</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Equations_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Equations_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Equation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89quation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Equilateral-Triangle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Equilateral-Triangle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gleichseitiges_Dreieck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Equilateral_triangle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Equivalent_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Equivalent_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gleichwertigkeit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Equivalence</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89quivalence</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#EulerLine_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;EulerLine_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Eulergerade</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Euler_line</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Event_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Event_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ereignis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Event</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89v%C3%A9nement</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#ExCircle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;ExCircle_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Kreise_am_Dreieck</definitionURL>
+        <definitionURL xml:lang="de"
+            >http://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Incircle_and_excircles_of_a_triangle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Excenter_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Excenter_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Excenter</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Experiments_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Experiments_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Experiment</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Experiment</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Exponential_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Exponential_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Exponentialfunktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Exponential_function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction_exponentielle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Exponentiation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Exponentiation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Potenzieren</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Exponentation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Expression_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Expression_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Expression</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Expression</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#FermatPoint_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;FermatPoint_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Fermat-Punkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Fermat_point</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#FeuerbachCircle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;FeuerbachCircle_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Feuerbachkreis</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Nine-point_circle</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Cercle_d%27Euler</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Formula_of_a_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Formula_of_a_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Funktionsgleichung</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Formula_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Formula_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Formel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Formule</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Fourier_analysis_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Fourier_analysis_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Fourieranalyse</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Fourier_analysis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Analyse_de_Fourier</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Fourier_series_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Fourier_series_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Fourierentwicklung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Fourier_series</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/S%C3%A9ries_de_Fourier</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Fraction_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Fraction_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Bruch</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Fraction</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fraction</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Frequency_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Frequency_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Periode</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Frequency</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Function_Plotter_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Function_Plotter_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Funktionsplotter</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Funktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#GergonnePoint_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;GergonnePoint_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gergonne-Punkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Gergonne_point</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Gradient_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Gradient_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Steigung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Grade</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Gradient</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Graduated_ruler_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Graduated_ruler_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/R%C3%A8gle_gradu%C3%A9e</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphical_Representation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Graphical_Representation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Graphical_representation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Repr%C3%A9sentation_graphique</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Graphing_Calculator_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Graphing_Calculator_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Grafikf%C3%A4higer_Taschenrechner</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Graphing_calculator</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Green_Theorem_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Green_Theorem_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Green%27s_theorem</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Heron_Method_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Heron_Method_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Babylonisches_Wurzelziehen</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Babylonian_method</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/M%C3%A9thode_de_H%C3%A9ron</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Hexagon_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Hexagon_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Sechseck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Hexagon</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Hexagone</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Histogram_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Histogram_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/S%C3%A4ulendiagramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Histogram</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Histogramme</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Hyperbola_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Hyperbola_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Hyperbel_(Mathematik)</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Hyperbola</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Hyperbole_(math&#233;matiques)</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Hyperbolic_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Hyperbolic_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Hyperbelfunktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Hyperbolic_function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction_hyperbolique</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Hypothesis_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Hypothesis_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Hypothese</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Hypothesis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Hypoth%C3%A8se</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Icosahedron_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Icosahedron_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Icosahedron</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Icosa%C3%A8dre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Identity_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Identity_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Identit%C3%A4t</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Identity</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Identit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Incenter_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Incenter_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Incenter</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Incidence_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Incidence_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Inzidenz</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Incircle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Incircle_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Kreise_am_Dreieck</definitionURL>
+        <definitionURL xml:lang="de"
+            >http://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Incircle</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Incircle_and_excircles_of_a_triangle</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Inflection_Point -->
+
+    <rdf:Description rdf:about="&GeoSkills;Inflection_Point">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Point_of_inflection</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Inner_Product_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Inner_Product_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Dot_product</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Inscribed_angle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Inscribed_angle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Inscribed_angle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angle_inscrit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Integer_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Integer_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ganze_Zahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Integer</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Entier_relatif</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#InterceptTheorem -->
+
+    <rdf:Description rdf:about="&GeoSkills;InterceptTheorem">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Strahlensatz</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Thal%C3%A8s</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Intersection_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Intersection_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Schnittmenge</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Intersection</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Intersection</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Inverse_proportionality_relation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Inverse_proportionality_relation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Antiproportional</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Irrational_Number_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Irrational_Number_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Irrationale_Zahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Irrational_number</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Nombre_irrationnel</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Isometry_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Isometry_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Isometrie</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Isometry</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Isosceles_Triangle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Isosceles_Triangle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gleichschenkliges_Dreieck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Isosceles_triangle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Triangle_isoc%C3%A8le</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Kite_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Kite_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Drachen</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Cerf-volant</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Laplace_rule_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Laplace_rule_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Laplace_law</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Loi_de_Laplace</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Latitude_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Latitude_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Breitengrad</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Latitude</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Latitude</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#LatticePoint_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;LatticePoint_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Lattice_point</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Lemniscate_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Lemniscate_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Lemniscate</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Length_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Length_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/L%C3%A4nge</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Length</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Longueur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Length_unit_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Length_unit_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/L%C3%A4ngeneinheit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Unit%C3%A9_de_longueur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Line_chart_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Line_chart_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Liniendiagramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Line_graph</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Line_of_best_fit_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Line_of_best_fit_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ausgleichsgerade</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Line_of_best_fit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Droite_de_r%C3%A9gression</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_Equation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Linear_Equation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lineare_Gleichung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Linear_equation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89quation_du_premier_degr%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_Rational_Function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Linear_Rational_Function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Fractional_linear_transformation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Transformation_de_M%C3%B6bius</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_equations_system_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Linear_equations_system_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lineares_Gleichungssystem</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Simultaneous_linear_equations</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Linear_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lineare_Funktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Linear_function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction_lin%C3%A9aire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Linear_model_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Linear_model_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lineares_Modell</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Linear_model</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Mod%C3%A8le_lin%C3%A9aire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Locus_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Locus_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Geometrischer_Ort</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Lieu_g%C3%A9om%C3%A9trique</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Logarithmic_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Logarithmic_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Logarithmic_function</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Longitude_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Longitude_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/L%C3%A4ngengrad</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Longitude</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Longitude</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Lower_bound_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Lower_bound_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Lower_bound</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Borne_inf%C3%A9rieure</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Magnitude_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Magnitude_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gr%C3%B6%C3%9Fe</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Measure</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Grandeur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Map_Cartography_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Map_Cartography_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Karte</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Mass_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Mass_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Masse</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Mass</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Masse</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Mean_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Mean_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Arithmetisches_Mittel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Mean</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Moyenne</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Mean_variation_ratio_of_a_function_in_an_interval_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Mean_variation_ratio_of_a_function_in_an_interval_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Durchschnittliche_%C3%84nderungsrate</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Median_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Median_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Median</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Median</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/M%C3%A9diane</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Meridian_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Meridian_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Meridian_(Geographie)</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Meridian_(geography)</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/M&#233;ridien</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Midpoint_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Midpoint_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Massenmittelpunkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Midpoint</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Milieu</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Mode_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Mode_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/H%C3%A4ufigster_Wert</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Mode</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Mode</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Movement_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Movement_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Verschiebung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Movement</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/D%C3%A9placement</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Multiplication_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Multiplication_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Multiplikation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Multiplication</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Multiplication</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#NagelPoint_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;NagelPoint_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Nagel-Punkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Nagel_point</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Nappe_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Nappe_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Mantel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Nappe</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Natural_number_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Natural_number_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Nat%C3%BCrliche_Zahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Natural_number</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Entier_naturel</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Number_line_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Number_line_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zahlenstrahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Number_line</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Droite_gradu%C3%A9e</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Number_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Number_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Number</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Nombre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#ObtuseAngle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;ObtuseAngle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Stumpfer_Winkel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Obtuse_angle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angle_obtus</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Octahedron_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Octahedron_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Oktaeder</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Octahedron</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Octa%C3%A8dre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Operation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Operation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Operation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Operation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Op%C3%A9ration</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Order_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Order_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Reihenfolge</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Origin_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Origin_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ursprung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Origin</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Origine</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Orthocenter_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Orthocenter_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/H%C3%B6henschnittpunkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Orthocentre</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Orthocentre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Orthogonal_projection_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Orthogonal_projection_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Orthogonalprojektion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Orthogonal_projection</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Projection_orthogonale</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Orthogonal_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Orthogonal_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lotrecht</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Outlier_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Outlier_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ausrei%C3%9Fer</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Outlier</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Parabola_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Parabola_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Parabel_(Mathematik)</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Parabola</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Parabole</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Parallel_projection_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Parallel_projection_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Parallelprojektion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Parallel_projection</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Parallel_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Parallel_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Parallel</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Parallelogram_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Parallelogram_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Parallelogramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Parallelogram</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Parall%C3%A9logramme</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Pentagon_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Pentagon_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/F%C3%BCnfeck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Pentagon</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Pentagone</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Percentage_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Percentage_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Prozentsatz</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Percentage</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Pourcentage</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Perimeter_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Perimeter_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Umfang</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Perimeter</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/P%C3%A9rim%C3%A8tre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Periodic_3D_tesselation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Periodic_3D_tesselation_r">
+        <definitionURL rdf:datatype="&xsd;string"></definitionURL>
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Parkettierung#Arten_der_3D-Parkettierung</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Periodic_plane_tesselation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Periodic_plane_tesselation_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Parkettierung</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Tessellation</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Pavage</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Perpendicular_Bisector_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Perpendicular_Bisector_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Mittelsenkrechte</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Perpendicular_bisector</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Perpendicular_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Perpendicular_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lot</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Perspective_projection_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Perspective_projection_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zentralprojektion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Perspective_projection</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Perspective_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Perspective_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Perspektive</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Perspective_(visual)</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Perspective_(repr&#233;sentation)</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Pick_Theorem_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Pick_Theorem_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Pick%27s_theorem</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Pie_chart_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Pie_chart_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kuchendiagramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Pie_chart</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Camembert</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Piecewise-function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Piecewise-function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Piecewise_function</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Pigeonhole_Principle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Pigeonhole_Principle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Taubenschlagprinzip</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Planar.angle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Planar.angle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angle_plan</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Plane_Configuration_properties_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Plane_Configuration_properties_r">
+        <definitionURL xml:lang="de"
+            >http://de.wikipedia.org/wiki/Parkettierung</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Tessellation</definitionURL>
+        <definitionURL xml:lang="fr"
+            >http://fr.wikipedia.org/wiki/Pavage</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Plane_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Plane_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ebene</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Plane</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Plan</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Plane_section_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Plane_section_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Section_plane</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Planimeter -->
+
+    <rdf:Description rdf:about="&GeoSkills;Planimeter">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Planimeter</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Planimeter</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Platonic_solid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Platonic_solid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Platonischer_K%C3%B6rper</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Platonic_solid</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Solide_de_Platon</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Plots_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Plots_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Graph</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Plot</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Graphe_d%27une_fonction</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Point_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Point_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Punkt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Point</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Point</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Point_symmetric_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Point_symmetric_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Punktsymmetrisch</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Polar_Coordinates_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Polar_Coordinates_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Polarkoordinaten</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Polar_coordinates</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Coordonn%C3%A9es_polaires</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Polygon_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Polygon_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Polygon</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Polygon</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Polygone</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Polyhedron_decomposition_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Polyhedron_decomposition_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Decomposition</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/D%C3%A9composition</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Polyhedron_deformation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Polyhedron_deformation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Deformation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/D%C3%A9formation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Polyhedron_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Polyhedron_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Polyeder</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Polyhedron</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Poly%C3%A8dre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Polynomial_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Polynomial_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Polynomfunktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Polynomial_function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction_polynomiale</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Power_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Power_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Potenz</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Power</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Puissance</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Probability_density_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Probability_density_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Wahrscheinlichkeitsdichte</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Probability_density</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Densit%C3%A9_de_probabilit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Probability_distribution_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Probability_distribution_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Wahrscheinlichkeitsverteilung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Probability_distribution</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Distribution</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Probability_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Probability_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Wahrscheinlichkeit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Probability</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Probabilit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Problems_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Problems_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Problem</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Probl%C3%A8me</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Process_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Process_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Prozess</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Procedure</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Processus</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Programmable_Calculator_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Programmable_Calculator_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Programmierbarer_Taschenrechner</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Programmable_calculator</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Projection_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Projection_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Projektion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Projection</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Projection</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Proof_by_contradiction_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Proof_by_contradiction_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Widerspruchsbeweis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Proof_by_contradiction</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Preuve_par_l%27absurde</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Proof_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Proof_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Beweis</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Proof</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/D%C3%A9monstration</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Proportional_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Proportional_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Direkt_proportional</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Proportional</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Proportionnel</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Protractor_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Protractor_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Winkelmesser</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Rapporteur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Pyramid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Pyramid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Pyramide</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Pyramid</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Pyramide</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#PythagorasTheorem -->
+
+    <rdf:Description rdf:about="&GeoSkills;PythagorasTheorem">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Satz_des_Pythagoras</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Pythagoras%27_theorem</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Pythagore</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Quadratic_Equation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Quadratic_Equation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quadratische_Gleichung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Quadratic_equation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89quation_du_second_degr%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Quadratic_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Quadratic_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quadratische_Funktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Quadratic_function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction_du_second_degr%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Quadrilateral_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Quadrilateral_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Viereck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Quadrilateral</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Quadrilat%C3%A8re</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Quartile_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Quartile_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quantil</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Quartile</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Quartile</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Quotient_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Quotient_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Anteil</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Quotient</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Quotient</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Random_process_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Random_process_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zufallsprozess</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Random_process</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Processus_al%C3%A9atoire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Random_sample_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Random_sample_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zufallsauswahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Random_sample</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Random_sampling_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Random_sampling_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Stichprobe</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Random_sampling</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Random_variable_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Random_variable_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zufallsvariable</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Random_variable</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Variable_al%C3%A9atoire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Randomness_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Randomness_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zufall</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Randomness</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Rational_Number_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Rational_Number_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Rationale_Zahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Rational_number</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Nombre_rationnel</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Ray_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Ray_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Strahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Ray</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Demi-droite</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_number_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Real_number_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Reelle_Zahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Real_number</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Nombre_r%C3%A9el</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Real_world_representation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Real_world_representation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Modellieren</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Rectangle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Rectangle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Rechteck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Rectangle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Rectangle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Reduction_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Reduction_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Stauchung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Reduction</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/R%C3%A9duction</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Reflection_in_a_line_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Reflection_in_a_line_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Achsenspiegelung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Sym%C3%A9trie_axiale</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Reflection_in_a_plane_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Reflection_in_a_plane_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ebenenspiegelung</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Reflection_in_a_point_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Reflection_in_a_point_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Punktspiegelung</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Reflection_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Reflection_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Spiegelung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Reflection</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Sym%C3%A9trie</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Regular-Polygon_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Regular-Polygon_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Regular_polygon</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Polygone_r%C3%A9gulier</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Regular_hexagon_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Regular_hexagon_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Regular_hexagon</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Regular_pentagon_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Regular_pentagon_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Regular_pentagon</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Pentagone_r%C3%A9gulier</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Relationship_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Relationship_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Beziehung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Relationship</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Relation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Relative_frequency_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Relative_frequency_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Relative_H%C3%A4ufigkeit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Relative_frequency</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fr%C3%A9quence</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Remainder_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Remainder_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Remainder</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Reste</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Representativity_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Representativity_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Repr%C3%A4sentativit%C3%A4t</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Repr%C3%A9sentativit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#RevolutionSolid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;RevolutionSolid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Rotationsk%C3%B6rper</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Solide_de_r%C3%A9volution</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Rhombus_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Rhombus_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Raute</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Rhombus</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Losange</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Right-Prism_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Right-Prism_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Right_prism</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Prisme_droit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Right-Triangle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Right-Triangle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Rechtwinkliges_Dreieck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Right_angled_triangle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Triangle_rectangle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Right_angle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Right_angle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Rechter_Winkel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Right_angle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Angle_droit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Right_parallelepiped_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Right_parallelepiped_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quader</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Pav%C3%A9_droit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Rotation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Rotation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Drehung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Rotation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Rotation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Ruler_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Ruler_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Lineal</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Ruler</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/R%C3%A8gle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Sample_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Sample_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Auswahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Sample</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Echantillon</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Sample_space_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Sample_space_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ereignisraum</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Sample_space</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Scale_factor_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Scale_factor_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Skalierungsfaktor</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Section_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Section_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Querschnitt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cross_section</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Section</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Sector_chart_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Sector_chart_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Diagramme_circulaire</definitionURL>
+        <definitionURL xml:lang="en"
+            >http://en.wikipedia.org/wiki/Pie_chart</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Segment_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Segment_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Strecke</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Segment</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Segment</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Sequence_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Sequence_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Folge</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Sequence</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Suite</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Set_square_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Set_square_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Geodreieck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Set_square</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89querre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Side_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Side_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Seite</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Side</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/C%C3%B4t%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Similar_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Similar_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/%C3%84hnlich</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Similar</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Semblable</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Simple_event_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Simple_event_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89v%C3%A9nement_%C3%A9l%C3%A9mentaire</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Simulation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Simulation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Simulation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Simulation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Simulation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Sine_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Sine_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Sinus</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Skewness_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Skewness_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Schiefe</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Skewness</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Asym%C3%A9trie</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Solidobjects_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Solidobjects_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/K%C3%B6rper</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Solide</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Speed_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Speed_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Geschwindigkeit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Speed</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Vitesse</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Sphere_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Sphere_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kugel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Sphere</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Sph%C3%A8re</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Spiral_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Spiral_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Spirale</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Spiral</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Spirale</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Spread_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Spread_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Spread</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Dispersion</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Spreadsheet_Software_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Spreadsheet_Software_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Tabellenkalkulation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Spreadsheet</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Tableur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Square_Number_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Square_Number_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quadratzahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Square_number</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Carr%C3%A9_parfait</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Square_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Square_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quadrat</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Square</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Carr%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Square_root_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Square_root_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Quadratwurzel</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Square_root</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Racine_carr%C3%A9e</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Standard_deviation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Standard_deviation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Standardabweichung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Standard_deviation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/%C3%89cart_type</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Statistical_data_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Statistical_data_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Statistical_data</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Statistical_range_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Statistical_range_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Statistical_range</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Statistics_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Statistics_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Statistik</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Statistics</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Statistiques</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Straight_Line_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Straight_Line_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gerade</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Straight_line</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Droite</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Subset_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Subset_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Teilmenge</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Subset</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Sous-ensemble</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Subtraction_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Subtraction_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Subtraktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Substraction</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Soustraction</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Symbol_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Symbol_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Symbol</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Symbol</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Symbole</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#SymbolicExpression_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;SymbolicExpression_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Symbolic_expression</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Symmetric_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Symmetric_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Symmetrisch</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Symmetry_center_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Symmetry_center_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Symmetriezentrum</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Symmetry_line_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Symmetry_line_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Symmetrieachse</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Symmetry_axis</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Symmetry_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Symmetry_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Symmetrie</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Symmetry</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Sym%C3%A9trie</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#System_of_equations_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;System_of_equations_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Gleichungssystem</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Simultaneous_equations</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27%C3%A9quations</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Table_of_values_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Table_of_values_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Wertetabelle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Table_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Table_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Tabelle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Table</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Tableau</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Take_root_of_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Take_root_of_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Radizieren</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Tangent_of_angle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Tangent_of_angle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Tangente</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Tangent_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Tangent_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Tangent</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Template_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Template_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Vorlage</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Template</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Gabarit</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Tetrahedron_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Tetrahedron_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Tetraeder</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Tetrahedron</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/T%C3%A9tra%C3%A8dre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Time_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Time_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Zeit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Time</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Temps</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Tool_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Tool_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Werkzeug</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Tool</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Outil</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Topic_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Topic_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Thema</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Topic</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Transformation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Transformation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Abbildung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Transformation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Transformation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Translation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Translation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Translation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Shift</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Translation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Trapezoid_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Trapezoid_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Trapez</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Trapezoid</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Trap%C3%A8ze</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Tree_diagram_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Tree_diagram_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Baumdiagramm</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Tree</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Arbre</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#TriangleInterceptTheorem -->
+
+    <rdf:Description rdf:about="&GeoSkills;TriangleInterceptTheorem">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Strahlensatz</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Triangle_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Triangle_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Dreieck</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Triangle</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Triangle</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Trigonometric_function_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Trigonometric_function_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Trigonometrische_Funktion</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Trigonometric_function</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Fonction_trigonom%C3%A9trique</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Trigonometry_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Trigonometry_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Trigonometrie</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#TrilinearCoordinates_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;TrilinearCoordinates_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Trilineare_Koordinaten</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Trilinear_coordinates</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Unit_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Unit_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Einheit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Unit</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Unit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Unknown_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Unknown_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Unbekannte</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Unknown</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Inconnue</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Upper_bound_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Upper_bound_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Upper_bound</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Borne_sup%C3%A9rieure</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Variability_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Variability_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Variability</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Variabilit%C3%A9</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Variable_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Variable_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Variable</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Variable</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Variable</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Variation_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Variation_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Abwandlung</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Variation</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Variation</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Vector_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Vector_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Vektor</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Vector</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Vecteur</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Vertex_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Vertex_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ecke</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Vertex</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Sommet</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Volume_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Volume_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Rauminhalt</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://fr.wikipedia.org/wiki/Volume</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Voronoi_Diagram_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Voronoi_Diagram_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Dirichlet-Zerlegung</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#Word_problem_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;Word_problem_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Textaufgabe</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Word_problem</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#cardinalnumber_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;cardinalnumber_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kardinalzahl</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Cardinal_number</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#curriculum_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;curriculum_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Bildungsplan</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#fundamental_arithmetic_operations_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;fundamental_arithmetic_operations_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Grundrechenarten</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#gears_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;gears_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Gears</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#multiplication_up_to_100_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;multiplication_up_to_100_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Kleines_Einmaleins</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#ordinal_numbers_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;ordinal_numbers_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Ordinalzahlen</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#similar_triangles_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;similar_triangles_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/%C3%84hnliche_Dreiecke</definitionURL>
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://en.wikipedia.org/wiki/Similar_triangles</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkills#symmetrical_r -->
+
+    <rdf:Description rdf:about="&GeoSkills;symmetrical_r">
+        <definitionURL rdf:datatype="&xsd;string"
+            >http://de.wikipedia.org/wiki/Symmetrisch</definitionURL>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.inter2geo.eu/2008/ontology/GeoSkillsRelatives#pieChartsVScircularCharts -->
+
+    <relativeRelation rdf:about="#pieChartsVScircularCharts">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rel_weight rdf:datatype="&xsd;float">1.0</rel_weight>
+        <rel_to rdf:resource="&GeoSkills;Circular_chart_r"/>
+        <rel_from rdf:resource="&GeoSkills;Pie_chart_r"/>
+    </relativeRelation>
+</rdf:RDF>
